@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Coding Quiz</title>
+
+    <link rel="stylesheet" type="text/css" href="./Assets/CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <div>View Highscores</div>
+        <div class="timer">
+            <div class="timer-text">
+                <div>Time: <span class="timer-count">60</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="start">
+            <H1>JavaScript Quiz Challange</H1>
+            <p>Test your knowledge of JavaScript and start the timed quiz! For each wrong answer, 10 seconds will be
+                deducted from the timer. If the timer reaches 0 before you finish the quiz, the game will end and your
+                score will display. Good luck!</p>
+            <button onclick="hideStartPage()" class="start-quiz">Start Quiz</button>
+        </div>
+
+        <div class="quiz">
+            <div id="question-title"></div>
+            <div id="question-choices"></div>
+            <div id="alert"></div>
+        </div>
+
+        <div id="results">
+            <h2>Results</h2>
+            <p>Your final score is <span class="final-score"></span> of 4</p>
+            <form>
+                <label for="initials">Enter Initials:</label>
+                <input type="text" id="initials" name="initials">
+                <button onclick="hideHighscorePage()" class="submit-score">Submit</button>
+            </form>
+        </div>
+
+        <div class="highscores">
+            <h2>Highscores</h2>
+            <div class="listed-highscore-initials"></div>
+            <div class="listed-highscore-scores"></div>
+            <button class="restart">Go Back</button>
+            <button class="clear-highscores">Clear Highscores</button>
+        </div>
+    </main>
+
+    <script src="./Assets/JS/script.js"></script>
+</body>
+
+</html>
