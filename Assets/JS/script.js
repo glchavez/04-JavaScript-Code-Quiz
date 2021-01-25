@@ -14,6 +14,9 @@ var submitScoreBtn = document.querySelector(".submit-score");
 // For the highscores page of the quiz
 var restartBtn = document.querySelector(".restart");
 var clearHighscoresBtn = document.querySelector(".clear-highscores");
+var listedHighscoreInitials = document.querySelector(".listed-highscore-initials");
+var listedHighscoreScores = document.querySelector(".listed-highscore-scores");
+
 
 var currentQuestion = 0;
 var totalCorrectAnswers = 0;
@@ -22,28 +25,30 @@ var totalCorrectAnswers = 0;
 // List of quuestions, their possible answers, and the correct answer
 var questions = [
     {
-        question: "Question 1 text?",
-        choices: ["option1", "option2", "option3", "option4"],
-        answer: "option2"
+        question: "Which will create an alert box that states 'Hello!' within the alert?",
+        choices: ["alertbox('Hello!')", "alert('Hello!')", "alert(Hello!)", "alertbox(Hello!)"],
+        answer: "alert('Hello!')"
     },
     {
-        question: "Question 2 text?",
-        choices: ["option5", "option6", "option7", "option8"],
-        answer: "option5"
+        question: "which states that the value and data type of x is equal to 3?",
+        choices: ["x === 3", "x == 3", "x <= 3", "x != 3"],
+        answer: "x === 3"
     },
     {
-        question: "Question 3 text?",
-        choices: ["option9", "option10", "option11", "option12"],
-        answer: "option12"
+        question: "Which is a boolean?",
+        choices: ["var answer = 7", "var answer = 'false'", "var answer = 'Correct'", "var answer = true"],
+        answer: "var answer = true"
     },
     {
-        question: "Question 4 text?",
-        choices: ["option13", "option14", "option15", "option16"],
-        answer: "option15"
+        question: "What character is used to encase an array?",
+        choices: ["{ }", "( )", "[ ]", "/ /"],
+        answer: "[]"
     },
 ]
 
-// Start button on beginning page
+hideResultsPage();
+hideHighscorePage();
+
 startBtn.addEventListener("click", startQuiz);
 
 questionChoices.addEventListener("click", function (event) {
@@ -66,7 +71,6 @@ questionChoices.addEventListener("click", function (event) {
     }
 });
 
-// Quiz related content and timer
 function renderQuestion() {
 
     questionTitle.innerHTML = ""
@@ -108,7 +112,6 @@ function startQuiz() {
     renderQuestion();
 };
 
-// Relates to the page that lists score and asks for initials
 function endQuiz() {
 
     hideResults = false;
@@ -122,13 +125,6 @@ function endQuiz() {
     hideResultsPage();
 };
 
-
-
-var listedHighscoreInitials = document.querySelector(".listed-highscore-initials");
-var listedHighscoreScores = document.querySelector(".listed-highscore-scores");
-
-
-// Relates to the highscores page
 function renderHighscores() {
 
     var scoreInitials = localStorage.getItem("initials");
@@ -148,6 +144,8 @@ submitScoreBtn.addEventListener("click", function (event) {
     localStorage.setItem("initials", scoreInitials);
     localStorage.setItem("final-score", storedFinalScore);
 
+    hideResults = true;
+    hideResultsPage();
     renderHighscores();
 })
 
@@ -158,11 +156,6 @@ clearHighscoresBtn.addEventListener("click", function () {
 });
 
 restartBtn.addEventListener("click", startQuiz)
-
-
-
-
-
 
 function hideStartPage() {
     var startDiv = document.getElementById("start");

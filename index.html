@@ -11,7 +11,6 @@
 
 <body>
     <header>
-        <div>View Highscores</div>
         <div class="timer">
             <div class="timer-text">
                 <div>Time: <span class="timer-count">60</span></div>
@@ -44,11 +43,11 @@
             </form>
         </div>
 
-        <div class="highscores">
+        <div id="highscores">
             <h2>Highscores</h2>
             <div class="listed-highscore-initials"></div>
             <div class="listed-highscore-scores"></div>
-            <button class="restart">Go Back</button>
+            <button onclick="hideHighscorePage()" class="restart">Go Back</button>
             <button class="clear-highscores">Clear Highscores</button>
         </div>
     </main>
