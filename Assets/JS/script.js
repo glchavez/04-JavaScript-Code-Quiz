@@ -42,7 +42,7 @@ var questions = [
     {
         question: "What character is used to encase an array?",
         choices: ["{ }", "( )", "[ ]", "/ /"],
-        answer: "[]"
+        answer: "[ ]"
     },
 ]
 
