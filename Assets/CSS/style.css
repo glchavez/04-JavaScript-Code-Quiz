@@ -1,0 +1,16 @@
+header {
+    background-color: rgb(92, 128, 92);
+    border: solid 1px black;
+    color: white;
+}
+
+button {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    margin: 5px;
+}
+
+main {
+    text-align: center;
+}
