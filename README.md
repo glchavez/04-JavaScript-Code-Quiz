@@ -1,8 +1,10 @@
 # 04-JavaScript-Code-Quiz
 
-## Description
+The purpose of this code quiz is to test an individuals knowledge of basic JavaScript knowledge.
 
-The purpose of this code quiz is to test an individuals knowledge of basic JavaScript knowledge. The quiz includes four questions that need to be answered within 60 seconds. Overall, this quiz is intended to test student learners of their JavaScript knowledge and improving what they don't know. 
+## Overview
+
+The quiz includes four questions that need to be answered within 60 seconds. Overall, this quiz is intended to test student learners of their JavaScript knowledge and improving what they don't know. 
 
 In addition to helping others with their learning, I created this code quiz to further develop my JavaScript knowledge. A key takeaway from this project was how to create an HTML file that connected to code within a JavaScript file. It tested my ability to conceptualize how code interacts between files. I also learned how to hide and display HTML elements when the code is executed on a website.
 
